@@ -1,0 +1,53 @@
+commit 8e1fabf29f432353358b11d4399cbaa0449c27db
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Thu Apr 10 16:41:13 2014 -0300
+
+    Agregado boton de vaciar carro
+
+commit 363265c6022f169f80eeb18dda3fc2b7d20e2428
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Thu Apr 10 15:21:08 2014 -0300
+
+    Agregado mensaje de error en gets invalidos a carts
+
+commit d5f49caa6f42340aee62ab0c7e8decd3913b521b
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Wed Apr 9 17:59:03 2014 -0300
+
+    [FIX] Items duplicados en cart ahora muestran la cantidad productos en lugar de multiplicarse
+
+commit 5c487d91e78dbe99f8357b2d1753aa04775b8508
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Wed Apr 9 16:09:48 2014 -0300
+
+    Agregado cart y line_item
+
+commit f65986fd84c67f42277eefbb2255bb721f753e58
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Tue Apr 8 16:01:59 2014 -0300
+
+    Agregado soporte cache, currency to AR, hora en sidebar
+
+commit 4d02f48b1ecdd5126bac10b6ba375a62ada4f8d6
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Tue Apr 8 15:30:17 2014 -0300
+
+    Agregado store con fix de css
+
+commit 3ef9915e6d4e9932d3ca56ecf0ed957a9ba07d9b
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Mon Apr 7 17:24:41 2014 -0300
+
+    Validation error fix
+
+commit 36b6e0e34b4e09da75dec5d746fe824ae717aea0
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Mon Apr 7 17:19:06 2014 -0300
+
+    Agregue validaciones en los formularios
+
+commit 56d45ed4d4372433cacb04cbcd538894bedef90f
+Author: Matt Moya <matiasmoya@gmail.com>
+Date:   Mon Apr 7 16:45:13 2014 -0300
+
+    Depot Scaffold

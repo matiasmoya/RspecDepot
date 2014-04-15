@@ -1,11 +1,14 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+config.assets.precompile += [
+      'store.css.scss','scaffolds.css.scss','products.css.scss','carts.css.scss','application.css.scss'
+    ]
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
-
+    
 module DepotA
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

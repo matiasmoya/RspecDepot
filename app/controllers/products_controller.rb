@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+  before_filter :authenticate_user!
+  before_filter do 
+    redirect_to store_url unless current_user && current_user.admin?
+  end
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -79,6 +83,7 @@ def create
     def set_product
       @product = Product.find(params[:id])
     end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params

@@ -1,5 +1,8 @@
 class OrdersController < ApplicationController
-  skip_before_action :authorize
+  before_filter :authenticate_user!
+  before_filter do 
+    redirect_to store_url unless current_user && current_user.admin?
+  end
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]

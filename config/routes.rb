@@ -1,19 +1,14 @@
 DepotA::Application.routes.draw do
-  get 'admin' => 'admin#index'
-  controller  :sessions do
-    get 'login' => :new
-    post 'login' => :create
-    delete 'logout' => :destroy
-end
+  devise_for :users
+  # devise_for :users
   # get "sessions/new"
   # get "sessions/create"
-  # get "sessions/destroy"
-  resources :users
-  resources :products
+  # get "sessions/destroy"  resources :products
   scope '(:locale)' do
     resources :orders
     resources :line_items
     resources :carts
+    resources :products
     root 'store#index', as: 'store', via: :all
   end
 

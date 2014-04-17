@@ -44,6 +44,6 @@ Product.create!(title: 'Rails Test Prescriptions',
   image_url: 'rtp.jpg',
   price: 34.95)
 # . . .
-admin_user = User.new( :email => matiasmoya, :password => asdqwe123 )
+admin_user = User.new( :email => "matiasmoya@gmail.com", :password => "asdqwe123" )
 admin_user.admin = true
 admin_user.save!

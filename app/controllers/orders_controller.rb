@@ -1,8 +1,5 @@
 class OrdersController < ApplicationController
-  before_filter :authenticate_user!
-  before_filter do 
-    redirect_to store_url unless current_user && current_user.admin?
-  end
+
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
@@ -11,6 +8,7 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+    redirect_to store_url unless current_user && current_user.admin?
   end
 
   # GET /orders/1

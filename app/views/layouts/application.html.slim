@@ -25,7 +25,7 @@ html
           li: a href="#" #{t('.questions')}
           li: a href="#" #{t('.news')}
           li: a href="#"  #{t('.contact')}
-          li: p #{ Time.now }
+          li: p.sli #{Time.now} Using slim
 
         - if current_user.try(:admin?)
           ul

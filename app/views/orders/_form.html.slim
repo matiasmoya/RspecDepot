@@ -1,0 +1,22 @@
+== form_for(@order) do |f|
+  - if @order.errors.any?
+    div#error_explanation
+      h2 #{pluralize(@order.errors.count, "error")} prohibited this order from being saved:
+      ul
+        - @order.errors.full_messages.each do |msg|
+          li #{msg}
+
+  div.field
+    == f.label :name
+    == f.text_field :name, size: 40
+  div.field
+    == f.label :address
+    == f.text_area :address, rows:3, cols:40
+  div.field
+    == f.label :email
+    == f.email_field :email, size: 40
+  div.field
+    == f.label :pay_type
+    == f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Seleccione el metodo de pago'
+  div.actions
+    == f.submit 'Realizar orden'

@@ -46,7 +46,7 @@ class LineItemsController < ApplicationController
   def update
     respond_to do |format|
       if @line_item.update(line_item_params)
-        format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
+        format.html { redirect_to store_url, notice: 'Line item was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -58,10 +58,19 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
-    @line_item.destroy
-    respond_to do |format|
-      format.html { redirect_to line_items_url }
-      format.json { head :no_content }
+   respond_to do |format|
+    if @line_item.quantity > 1
+      @line_item.quantity = @line_item.quantity - 1
+      @line_item.save
+      format.html { redirect_to store_url }
+      format.js   { @current_item = @line_item }
+      format.json { render action: 'show', status: :created, location: @line_item }
+    else
+      @line_item.destroy
+      format.html { redirect_to store_url }
+      format.js   { @current_item = @line_item }
+      format.json { render action: 'show', status: :created, location: @line_item }
+    end
     end
   end
 

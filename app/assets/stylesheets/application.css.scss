@@ -13,9 +13,13 @@
  *= require_self
  *= require_tree .
  */
-
+body{
+  margin-left:0px;
+  margin-top:0px;
+}
 #banner {
   background: #9c9;
+  width:100%;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
@@ -23,12 +27,12 @@
   text-align: center;
 
   img {
-    float: left;
+  float: left;
   }
   .locale {
-float: right;
-margin: -0.25em 0.1em;
-}
+  float: right;
+  margin: -0.25em 0.1em;
+  }
 }
 
 #notice {
@@ -41,18 +45,25 @@ margin: -0.25em 0.1em;
 }
 
 #columns {
-  background: #141;
+  display:inline-block;
+  width: 100%;
+  height: 100%;
+  
 
   #main {
-    margin-left: 17em;
-    padding: 1em;
     background: white;
+    float: none;
+    margin-left: 20%;
+    height: 100%;
+    width:80%;
+    padding: 0em 0em 0em 1em;
   }
 
   #side {
-    float: left;
-    padding: 1em 2em;
-    width: 13em;
+    float:left;
+    height: 100%;
+    width:18%;
+    padding: 1em 0em 0em 1em;
     background: #141;
 	
   form, div {
@@ -90,6 +101,7 @@ margin: -0.25em 0.1em;
   }
 }
 .depot_form {
+width: 100%;
   fieldset {
     background: #efe;
 

@@ -8,7 +8,7 @@ div.store
     - @products.each do |product|
       - cache ['entry', product] do
         div.entry
-          == image_tag(product.image_url)
+          == image_tag(product.image_url, class: "productimg")
           h3 #{product.title}
           == sanitize(product.description)
           .price_line

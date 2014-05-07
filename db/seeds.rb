@@ -47,3 +47,8 @@ Product.create!(title: 'Rails Test Prescriptions',
 admin_user = User.new( :email => "matiasmoya@gmail.com", :password => "asdqwe123" )
 admin_user.admin = true
 admin_user.save!
+# . . .
+Order.create!(name: 'Order new from seed',
+  address: %{Some adress 123},
+  email: 'order@order.com',
+  pay_type: 'Tarjeta de credito')

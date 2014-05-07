@@ -9,7 +9,7 @@ table
       th Pay Type
   tbody
     - @orders.each do |order|
-      tr
+      tr.order_actions
         td #{order.name}
         td #{order.address}
         td #{order.email}
